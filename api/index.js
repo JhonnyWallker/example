@@ -9,6 +9,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //routes
+app.get('/', (req, res) => {
+    res.send('welcome to my api');
+});
 app.get('/api', (req, res) => {
     return res.json({ hello: 'dog' });
 });
